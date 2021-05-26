@@ -1,0 +1,32 @@
+spring:
+  main:
+    banner-mode: "off"
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 843ef12159cc9f7c0105
+            clientSecret: 
+html:
+  title: Aleut Faucet
+  request_message: Welcome to our faucet. You can ask for up to 1 ETH on this faucet.
+  address_help: Enter your Ethereum public address.
+  submit_button: Send 💵
+
+faucet:
+  maxETH: 1
+  chainId: 7822
+  rpcPort: 8545
+  rpcHost: besu
+  gas: 21000
+  gasPrice: 0
+
+wallet:
+  path: /var/wallet/wallet.key
+  password: changeme
+banner:
+
+auth:
+  org: 
+  disabledOrg: true
