@@ -11,7 +11,7 @@ services:
     volumes:
      - ./genesis.json:/var/genesis.json
      - ./data:/var/data
-    command: --genesis-file=/var/genesis.json --fast-sync-min-peers=1 --data-path=/var/data --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --host-allowlist=* 
+    command: --sync-mode=FULL --genesis-file=/var/genesis.json --fast-sync-min-peers=1 --data-path=/var/data --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --host-allowlist=* 
     restart: unless-stopped
   faucet:
     image: "tmio/tuweni:1.5.0-dev"
